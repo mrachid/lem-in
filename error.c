@@ -6,7 +6,7 @@
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/14 16:43:15 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/14 17:41:32 by mrachid          ###   ########.fr       */
+/*   Updated: 2014/02/14 18:09:45 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,5 @@ char		**ft_error(char **str)
 				perror("error");
 		}
 	}
-
 	return (str);
 }
