@@ -6,7 +6,7 @@
 #    By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/02/13 20:41:08 by mrachid           #+#    #+#              #
-#    Updated: 2014/02/13 20:59:31 by mrachid          ###   ########.fr        #
+#    Updated: 2014/02/14 09:15:31 by mrachid          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAG = -Wall -Werror -Wextra
 
 ICLD = -I libft/includes
 
-SRC = main.c
+SRC = main.c parser.c
 
 .PHONY: all clean fclean re
 
