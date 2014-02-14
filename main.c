@@ -6,7 +6,7 @@
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/14 10:32:20 by mrachid          ###   ########.fr       */
+/*   Updated: 2014/02/14 17:41:19 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int		main(int ac, char **av)
 			str[i] = line;
 			i++;
 		}
+	str = ft_error(str);
+//	ft_parser(str);
 	}
-	ft_parser(str);
 	return (0);
 }
-
 /*
 **	passer en list pour eviter le malloc et la limite du malloc "100"
 **	chiffre arbitraire
