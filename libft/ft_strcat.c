@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/22 10:54:36 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/01 11:43:04 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+char	*ft_strcat(char *s1, const char *s2)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0')
+	{
+		s1[i + j] = s2[j];
+		j++;
+	}
+	s1[i + j] = '\0';
+	return (s1);
 }
+

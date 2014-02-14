@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/20 18:20:23 by mrachid           #+#    #+#             */
+/*   Updated: 2013/11/27 15:00:01 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+int		ft_toupper(int c)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else
+		return (c);
 }
+

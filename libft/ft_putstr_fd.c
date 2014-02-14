@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/21 16:02:17 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/01 10:57:11 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <libft.h>
-
-int		main()
+int		ft_strlen(const char *s);
+void	ft_putstr_fd(char const *s, int fd)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	write(fd, s, ft_strlen(s));
 }
+

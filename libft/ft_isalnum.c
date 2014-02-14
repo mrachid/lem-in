@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/20 17:04:08 by mrachid           #+#    #+#             */
+/*   Updated: 2013/11/27 14:38:27 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+int		ft_isalnum(int c)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	else
+		return (0);
 }
+

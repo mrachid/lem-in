@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/19 15:41:30 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/07 15:55:54 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-int		main()
+void	ft_putchar(char c);
+void	ft_putendl(char const *s)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
+	ft_putchar('\n');
 }
+

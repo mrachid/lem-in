@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/26 15:35:28 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/18 10:58:57 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	char	*tmp;
+
+	if (s1 && s2)
+	{
+		tmp = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+		if (!tmp)
+			return (NULL);
+		ft_strcpy(tmp, s1);
+		ft_strcat(tmp, s2);
+		return (tmp);
+	}
+	return (NULL);
 }
+

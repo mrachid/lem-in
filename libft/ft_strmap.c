@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/27 17:08:39 by mrachid           #+#    #+#             */
+/*   Updated: 2014/01/02 15:39:38 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+char		*ft_strmap(char const *s, char (*f)(char))
 {
-	ft_putstr("makefile ok");
-	return (0);
+	char	*tmp;
+	int		i;
+
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	tmp = ft_strnew(ft_strlen(s));
+	while (s[i] != '\0')
+	{
+		tmp[i] = f(s[i]);
+		i++;
+	}
+	tmp[i] = '\0';
+	return (tmp);
 }
+

@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/23 11:31:35 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/02 15:35:35 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+char	*ft_strstr(const char *s1, const char *s2)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	while (*s1)
+	{
+		if (ft_strncmp(s1, s2, ft_strlen(s2)) == 0)
+			return ((char*) s1);
+		s1++;
+	}
+	if (*s2 == '\0')
+		return ((char*) s1);
+	return (NULL);
 }
+

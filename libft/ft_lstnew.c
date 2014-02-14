@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/12/11 16:26:36 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/11 18:15:47 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int		main()
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	t_list	*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	if (new)
+	{
+		if (content)
+		{
+			new->content_size = content_size;
+			new->content = (void *)content;
+			new->next = NULL;
+		}
+		else
+		{
+			new->content_size = 0;
+			new->content = NULL;
+		}
+		return (new);
+	}
+	return (NULL);
 }
+

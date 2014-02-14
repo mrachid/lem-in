@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/20 16:17:47 by mrachid           #+#    #+#             */
+/*   Updated: 2013/11/27 14:43:18 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+void				*ft_memset(void *b, int c, size_t len)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	unsigned char	*tmp;
+	size_t			i;
+
+	i = 0;
+	tmp = b;
+	while (i < len)
+	{
+		tmp[i] = (unsigned char) c;
+		i++;
+	}
+	return (b);
 }
+

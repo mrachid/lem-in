@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/20 12:12:19 by mrachid           #+#    #+#             */
+/*   Updated: 2013/11/27 14:54:20 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+int		ft_strnequ(char const *s1, char const *s2, int n)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	int	i;
+
+	i = 0;
+	if (s1 && s2 && n)
+	{
+		while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
+			i++;
+		if (s1[i] == s2[i])
+			return (1);
+		else
+			return (0);
+	}
+	return (1);
 }
+

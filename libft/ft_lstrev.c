@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/12/13 17:47:23 by mrachid           #+#    #+#             */
+/*   Updated: 2013/12/18 10:52:25 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+void						ft_lstrev(t_list **alst)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	t_list					*new;
+	t_list					*old_next;
+	t_list					*old_current;
+
+	new = NULL;
+	old_current = *alst;
+	while (old_current)
+	{
+		old_next = old_current->next;
+		old_current->next = new;
+		new = old_current;
+		old_current = old_next;
+	}
+	*alst = new;
 }
+

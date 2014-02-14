@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrachid <mrachid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 20:50:20 by mrachid           #+#    #+#             */
-/*   Updated: 2014/02/13 20:59:32 by mrachid          ###   ########.fr       */
+/*   Created: 2013/11/23 15:17:15 by mrachid           #+#    #+#             */
+/*   Updated: 2013/11/27 14:51:14 by mrachid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		main()
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	ft_putstr("makefile ok");
-	return (0);
+	size_t	check;
+	size_t	min;
+
+	check = size - ft_strlen(dst) - 1;
+	if (size < ft_strlen(dst))
+		min = size;
+	else
+		min = ft_strlen(dst);
+	if ((int) check > 0)
+		ft_strncat(dst, src, check);
+	return (ft_strlen(src) + min);
 }
+
